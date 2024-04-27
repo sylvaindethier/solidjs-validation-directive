@@ -96,7 +96,7 @@ import { onCleanup } from "solid-js";
  * @example
  * - A `validator` must be Type
  *   ```ts
- *   (element: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => string
+ *   (element: HTMLElement_Validation) => string
  *   ```
  * and returns an empty string `""` when the element is `valid`,
  * or returns a i18n `validationMessage`
@@ -241,7 +241,7 @@ declare module "solid-js" {
  *   ```
  * - A `validator` must be Type
  *   ```ts
- *   (element: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => string
+ *   (element: HTMLElement_Validation) => string
  *   ```
  * and returns an empty string `""` when the element is `valid`,
  * or returns a i18n `validationMessage`
@@ -261,15 +261,15 @@ declare module "solid-js" {
  *   ```jsx
  *   <input use:validation={[validationMessageSetter, {
  *     resetOn?: "change", // default
- *     setOn?: "invalid" // default
+ *     setOn?: "invalid", // default
  *   }]}>
  *   ```
  * - With `validationMessageSetter`, `validator`s and options
  *   ```jsx
  *   <input use:validation={[validationMessageSetter, [validator, validator], {
  *     resetOn?: "change", // default
- *     setOn?: "invalid" // default
- *     reportOn?: "change" // default
+ *     setOn?: "invalid", // default
+ *     reportOn?: "change", // default
  *   }]}>
  *   ```
  */
