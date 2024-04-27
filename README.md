@@ -38,6 +38,7 @@ In the example below, we use the directive on an `input` HTMLInputElement.
   ```jsx
   <input use:customValidity={[validator, validator]}>
   ```
+
 - With `validator`s and event options
 
   ```jsx
@@ -72,6 +73,7 @@ A `validationMessageOptions` must be Type
   ```
 
 - With `validationMessageSetter` and options
+
   ```jsx
   <input use:validationMessage={[validationMessageSetter, {
     resetOn?: "change", // default
